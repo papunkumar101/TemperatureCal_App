@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Celsius to Fahrenheit and  kelvin</title>
+    <style>
+      body{
+        padding: 0;
+        margin: 0;
+        font-family: Sans-Serif;
+        background-color: #00ffcc;
+         text-align: center;
+      }
+      h2{
+        color:red;
+        text-shadow: 2px 2px 2px #777;
+        font-weight: bold;
+        margin: 10px auto;
+      }
+     input[type=number]{
+        border: none;
+  border-radius: 5px;
+   width: 200px;
+   height: 25px;
+      }
+
+      ::placeholder{
+        padding: 13px;
+        font-weight: bold;
+      }
+      div#one{
+       
+        text-align: center;
+      }
+      div#two{
+       
+        text-align: center;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h2>Tempreture App</h2><hr><br>
+    <input type="number" id="cal" placeholder="please input celsius value">
+    <div id="one"><h3 style="display:inline-block;">Fahrenheit:</h3><span id="fahr"></span></div>
+     <div id="two"><h3 style="display:inline-block;">kelvin:</h3><span id="kelv"></span></div>
+     <script>
+       var cal=document.getElementById("cal");
+       var fahr=document.getElementById("fahr");
+       var kelv=document.getElementById("kelv");
+         
+         cal.addEventListener('input',function(){
+            if(cal.value==""){
+         fahr.innerHTML=null;
+        kelv.innerHTML=null;  
+       }else{
+         fahr.innerHTML=cal.value*(9/5)+32;
+        kelv.innerHTML=cal.value+273.15;  }
+       }); 
+      
+     </script>
+  </body>
+</html>
